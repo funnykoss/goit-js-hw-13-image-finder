@@ -5,12 +5,10 @@
 }
 
 body {
-  padding: 20px;
-  font-family: Georgia, serif;
-  font-size: 25px;
-  text-align: center;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  line-height: 1.5;
   color: #2a2a2a;
-  background-color: #fbeec1;
 }
 
 img {
@@ -19,76 +17,50 @@ img {
   height: auto;
 }
 
-.photo-card img {
-  margin-bottom: 15px;
-  height: 200px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 24px;
 }
 
-.gallery {
-  margin: 10px 0;
-  padding: 0;
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.button.is-hidden {
+  display: none;
+}
+
+.button > .spinner.is-hidden {
+  display: none;
+}
+
+/* Article List */
+.gallery {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -10px;
+  margin-top: -10px;
 }
 
-.photo-card {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  width: calc((100% - 80px) / 4);
-  margin: 10px;
-
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
-
-  transition: transform 250ms linear;
+.gallery div {
+  flex-basis: calc(100% / 6 - 10px);
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 450px;
 }
 
-.photo-card:hover,
-.photo-card:focus {
-  transform: scale(1.1);
-  cursor: pointer;
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.stats {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.stats-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.material-icons {
-  color: #bc986a;
-}
-
-/* Load-more-btn */
-
-.load-more-btn.is-hidden {
-  display: none;
-}
-
-.spinner.is-hidden {
-  display: none;
-}
-
-.load-more-btn,
-input[name='query'] {
-  padding: 5px 15px;
-
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  font-weight: 500;
-}
-
-.spinner {
-  margin-bottom: 8px;
+.gallery a {
+  text-decoration: none;
+  color: #2a2a2a;
 }
